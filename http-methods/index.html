@@ -395,12 +395,12 @@
 
 
 <h1 id="http-verb-methods">HTTP verb methods<a class="headerlink" href="#http-verb-methods" title="Permanent link">&para;</a></h1>
-<p>For interacting with parts of the ODK Central API (<a href="https://odkcentral.docs.apiary.io">docs</a>) that have not been implemented in <code>pyodk</code>, use HTTP verb methods exposed on the <code>Client</code>:</p>
+<p>For interacting with parts of the ODK Central API (<a href="https://docs.getodk.org/central-api">docs</a>) that have not been implemented in <code>pyodk</code>, use HTTP verb methods exposed on the <code>Client</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;projects/8&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;projects/7/app-users&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;displayName&quot;</span><span class="p">:</span> <span class="s2">&quot;Lab Tech&quot;</span><span class="p">})</span>
 </code></pre></div>
 <p>These methods provide convenient access to <code>Client.session</code>, which is a <a href="https://requests.readthedocs.io/en/latest/user/advanced/#session-objects"><code>requests.Session</code></a> object subclass. The <code>Session</code> has customised to prefix request URLs with the <code>base_url</code> from the pyodk config. For example with a base_url <code>https://www.example.com</code>, a call to <code>client.session.get("projects/8")</code> gets the details of <code>project_id=8</code>, using the full url <code>https://www.example.com/v1/projects/8</code>.</p>
-<p>Learn more in <a href="/examples/beyond-library-methods/">this example</a>.</p>
+<p>Learn more in <a href="https://getodk.github.io/pyodk/examples/beyond-library-methods/">this example</a>.</p>
 
 
 
